@@ -1,0 +1,46 @@
+@use "_var.scss"as *;
+@use "_mixins.scss"as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px; 
+  color: $dark;
+  background: $colorBrand-light;
+}
+
+.container {
+  max-width: 1210px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+img,
+iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+
+.content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 30px;
+  @include sm{
+    display: block;
+  } 
+}
+

@@ -1,0 +1,66 @@
+@use "_var.scss" as *;
+@use "_mixins.scss" as *;
+
+.header{
+    padding: 13px 0 13px;
+    &-content{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        @include reset-list;
+    }
+    li{
+        margin-right: 22px;
+    }
+    a{
+        @include text($dark,14px,400,22px);
+        text-decoration: none;
+        transition: 0.2s;
+    }
+    a:hover{
+        @include hover{
+            color: $colorBrand
+        }
+    }
+    &-user{
+        @include text($dark,14px,400,22px);
+        text-decoration: none;
+        display: inline-block;
+        padding-left: 28px;
+        background: url(../../images/header/user.svg) 0 0 no-repeat;
+        border: none;
+        padding-right: 0;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+    &-user:hover{
+    @include hover{
+    @include text($colorBrand,14px,400,22px);
+        background: url(../../images/header/user-active.svg)2px 2px no-repeat;
+    }
+    }
+    @include sl{
+        nav{
+        margin: 10px auto;
+
+        }
+        &-user{
+            display: block;
+            margin: 0 auto;
+        }
+        ul{
+            justify-content: center;
+        }
+        li{
+        margin-right: 22px;
+        margin-bottom: 10px;
+        }
+    }
+}
+
+
+

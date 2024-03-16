@@ -1,0 +1,67 @@
+@use "_var.scss" as *;
+@use "_mixins.scss" as *;
+
+.footer {
+  margin-top: auto;
+  background: $white;
+  padding: 30px 0;
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  &-container {
+    max-width: 1190px;
+    margin: 0 auto;
+    padding: 0 10px 0 5px;
+  }
+  &-pay {
+    display: flex;
+    align-items: center;
+    p {
+      @include text($dark, 18px, 400, normal);
+      display: inline-block;
+      margin:0 5px 0 0;
+      cursor: pointer;
+    }
+    a {
+      margin-left: 14px;
+      text-indent: 100%;
+      overflow: hidden;
+      border-radius: 50%;
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      background-color: $grey;
+      margin-top: 4px;
+    }
+  }
+  &-master {
+    background: url(../../uploads/mastercard.svg)center no-repeat;
+  }
+  &-visa {
+    background: url(../../uploads/visa.svg)center no-repeat;
+  }
+  &-pays {
+    background: url(../../uploads/yandex.svg)center no-repeat;
+  }
+  &-geo {
+    @include text($dark, 14px, 400, 20px);
+    margin: 0;
+    cursor: pointer;
+  }
+  @include sm{
+    &-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &-pay{
+    margin-bottom: 15px;
+  }
+    &-geo {
+   padding-left: 10px;
+     }
+  }
+}

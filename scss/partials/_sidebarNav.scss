@@ -1,0 +1,38 @@
+@use "_var.scss"as *;
+@use "_mixins.scss"as *;
+
+.ingredients{
+    background-color: $white;
+    border-radius: 6px;
+    ul{
+        @include reset-list;
+    }
+    li{
+        @include text($dark,16px,400,24px);
+        padding: 10px 0 11px 16px;
+        border: 1px solid $grey;
+        width: 100%;
+        list-style: none;
+        transition: 0.4s;
+        &:hover{
+            @include hover{
+            @include text($dark-brown,14px,500,22px);
+            padding-left: 42px;
+            background:$colorBrand-md url(../../images/aside/cheese.svg) 12px center no-repeat;
+            }
+        }
+    }
+    li:first-child{
+        list-style: none;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+    }
+     li:last-child{
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+        list-style: none;
+    }
+    @include sl {
+        margin-bottom: 20px;
+}
+}

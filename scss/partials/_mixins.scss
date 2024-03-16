@@ -1,0 +1,36 @@
+@use "_var.scss" as *;
+
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+@mixin text($color, $size, $weight, $height) {
+  color: $color;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+}
+@mixin text-hover {
+  color: $colorBrand;
+}
+@mixin hover {
+  @media (hover: hover) and (pointer: fine) {
+    @content;
+  }
+}
+@mixin xl {
+  @media screen and (max-width: 890px) {
+    @content;
+  }
+}
+@mixin sl {
+  @media screen and (max-width: 730px) {
+    @content;
+  }
+}
+@mixin sm {
+  @media screen and (max-width: 640px) {
+    @content;
+  }
+}

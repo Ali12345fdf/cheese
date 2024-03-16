@@ -1,0 +1,33 @@
+@use "_var.scss"as *;
+@use "_mixins.scss"as *;
+
+.breadcrumbs{
+    padding: 0;
+    margin: 10px 0 15px;
+    @include text($dark-grey,14px,400,22px);
+    li{
+        @include reset-list;
+        cursor: pointer;
+        display: inline-block;
+
+        &:hover{
+              transition: 0.2s;
+            @include hover{
+                @include text-hover;
+            }
+        }
+    }
+    a{
+    @include text($dark-grey,14px,400,22px);
+        text-decoration: none;
+        cursor: pointer;
+        transition: 0.2s;
+        padding-right: 12px;
+        background: url(../../images/aside/arrow.svg) 48px -2px no-repeat;
+        &:hover{
+            @include hover{
+                @include text-hover;
+            }
+        }
+    }
+}

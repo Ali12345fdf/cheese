@@ -1,0 +1,81 @@
+@use "_var.scss"as *;
+@use "_mixins.scss"as *;
+
+.headeBottom{
+  padding: 10px 0 10px;  
+  border-top: 2px solid #E7E7E7;
+  border-bottom: 2px solid #E7E7E7;
+  &-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+&-info{
+    display: flex;
+        margin-left: 55px;
+    p{
+        @include text($dark-grey,13px,400,16px);
+        margin: 0;
+        width: 45%;
+        padding-left: 36px;
+        background: url(../../images/header/box.svg)0 5px no-repeat;
+        transition: 0.3s;
+        cursor: pointer;
+           &:hover{
+            @include hover{
+                 @include text($colorBrand,13px,400,16px);
+            }
+        }
+    }
+    p:last-child{
+        margin-left: 20px;
+        background: url(../../images/header/user-protection.svg)0 0 no-repeat;
+        transition: 0.3s;
+        cursor: pointer;
+          &:hover{
+            @include hover{
+                 @include text($colorBrand,13px,400,16px);
+            }
+        }
+    }
+}
+&-contact{
+    a{
+        @include text($dark,16px,700,22px);
+        display: block;
+        text-decoration: none;
+    }
+    button{
+        @include text($colorBrand,12px,400,18px);
+        margin-top: 4px;
+        border-radius: 4px;
+        border: 1px solid var(--primary-orange, #FD9339);
+        padding: 7px 7px 5px 33px;
+        background: transparent url(../../images/header/phone.svg) 6px center no-repeat;
+        transition: 0.2s;
+        &:hover{
+            @include hover{
+                background: $colorBrand url(../../images/header/phone-active.svg) 6px center no-repeat;
+                color: $white;
+            }
+        }
+    }
+}
+@include sl{
+    &-content{
+        justify-content: center;
+    }
+    &-contact{
+        margin-top: 20px;
+    }
+}
+@include sm{
+ 
+    &-info{
+        margin-top: 20px;
+        margin-left: 30px;
+    }
+}
+}
